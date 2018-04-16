@@ -1,11 +1,20 @@
+const webpack = require("webpack");
+
 var config = {
   entry: {
     app: ['./src/core/bootstrap.js'],
   },
+  devtool: "source-map",
   output: {
     path:     __dirname + '/build/',
-    filename: 'bundle.js',
+    filename: 'bundle.min.js',
   },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            include: /\.min\.js$/,
+            minimize: true
+        })
+    ],
   resolve: {
     root: __dirname + '/src/',
   },

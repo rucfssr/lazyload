@@ -4,7 +4,7 @@
   "scripts": {
     "start": "hs build",
     "build": "webpack -p",
-    "devs": "webpack-dev-server --content-base build --hot --inline --devtool eval"
+    "devs": "webpack-dev-server --content-base build --hot --inline --devtool source-map"
   },
   "dependencies": {
     "angular": "^1.6.2",
