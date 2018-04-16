@@ -1,0 +1,25 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lazy load App</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="row">
+      <nav class="col-xs-12">
+        <ul class="list-inline">
+          <li><a ui-sref="home">Home (Module 1)</a></li>
+          <li><a ui-sref="home.about">Home (Module 1/nested)</a></li>
+          <li><a ui-sref="messages">Messages (Module 2)</a></li>
+          <li><a ui-sref="messages.all">Messages List (Module 2 & 3)</a></li>
+          <li><a ui-sref="messages.new">New Message (Module 2, 4 and 5)</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div ui-view></div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
